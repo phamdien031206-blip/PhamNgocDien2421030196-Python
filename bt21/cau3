@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n, tich = 1, temp;
+
+    printf("Nhap n: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    while(temp > 0) {
+        tich *= temp % 10;
+        temp /= 10;
+    }
+
+    if(tich % 2 == 0 && tich > 20)
+        printf("Tich cac chu so la so chan va lon hon 20");
+    else
+        printf("Khong thoa man");
+
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int m, n, tong = 0, temp;
+
+    printf("Nhap m va n: ");
+    scanf("%d%d", &m, &n);
+
+    temp = n;
+
+    while(temp > 0) {
+        tong += temp % 10;
+        temp /= 10;
+    }
+
+    if(m % tong == 0)
+        printf("m chia het cho tong cac chu so cua n");
+    else
+        printf("m khong chia het cho tong cac chu so cua n");
+
+    return 0;
+}
